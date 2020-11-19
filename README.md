@@ -1,1 +1,1 @@
-# install
+# install scripts for initial start
