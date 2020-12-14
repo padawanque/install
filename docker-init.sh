@@ -9,7 +9,8 @@ apt install \
     ca-certificates \
     curl \
     gnupg-agent \
-    software-properties-common -y
+    software-properties-common \
+    mc \ -y
 	
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
@@ -19,7 +20,7 @@ add-apt-repository \
    stable"
 
 apt update
-apt install docker-ce docker-ce-cli containerd.io -y
+apt install docker-ce=5:19.03.14~3-0~ubuntu-focal docker-ce-cli=5:19.03.14~3-0~ubuntu-focal containerd.io -y
 
 curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
